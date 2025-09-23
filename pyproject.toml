@@ -1,0 +1,21 @@
+[project]
+name = "laptop-intelligence-engine"
+version = "0.1.0"
+dependencies = [
+    # ---- Backend API Dependencies ----
+    "fastapi",
+    "uvicorn[standard]", # The server that runs FastAPI
+    "sqlalchemy",        # The ORM for our database
+    "psycopg2-binary",   # The driver that lets SQLAlchemy talk to PostgreSQL
+    "python-dotenv",     # For loading variables from the .env file
+    "pydantic-settings", # For managing settings
+    "loguru",            # For logging
+
+    # ---- Data Ingestion Script Dependencies ----
+    "requests",          # For making HTTP requests to download PDFs/HTML
+    "beautifulsoup4",    # For parsing HTML
+    "PyMuPDF",           # For parsing PDF files
+
+    # ---- LLM Dependency----
+    "openai"
+]

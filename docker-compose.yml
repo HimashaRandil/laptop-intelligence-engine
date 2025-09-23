@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  
+  db:
+    image: postgres:15-alpine
+    container_name: laptop_db
+    environment:
+      # These variables are read from .env file
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      # Makes sure the data is saved even if you remove the container
+      - postgres_data:/var/lib/postgresql/data
+      # Automatically run schema script on the first startup
+      - ./backend/database_schema.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      # Makes the database accessible from your local machine (e.g., for a GUI tool)
+      - "5432:5432"
+    restart: unless-stopped
+
+# Defines the named volume for persistent data storage
+volumes:
+  postgres_data:
