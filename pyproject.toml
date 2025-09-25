@@ -13,6 +13,7 @@ dependencies = [
 
     # ---- Data Ingestion Script Dependencies ----
     "requests",          # For making HTTP requests to download PDFs/HTML
+    "playwright",
     "beautifulsoup4",    # For parsing HTML
     "PyMuPDF",           # For parsing PDF files
 
