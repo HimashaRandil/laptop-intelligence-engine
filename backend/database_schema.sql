@@ -22,11 +22,10 @@ CREATE TABLE specifications (
     specification_name VARCHAR(200) NOT NULL, -- 'CPU Model', 'RAM Size', 'Screen Size'
     specification_value TEXT NOT NULL, -- Raw value as extracted
     unit VARCHAR(20), -- 'GB', 'inch', 'GHz', etc. (optional)
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    
-    INDEX idx_laptop_category (laptop_id, category),
-    INDEX idx_spec_name (specification_name)
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+ALTER TABLE specifications ADD COLUMN structured_value JSONB;
 
 -- Price history (time series for trends)
 CREATE TABLE price_snapshots (
@@ -38,10 +37,7 @@ CREATE TABLE price_snapshots (
     shipping_info TEXT, -- 'Free shipping', '2-3 days', etc.
     promotion_text TEXT, -- '20% off', 'Free upgrade', etc.
     configuration_summary TEXT, -- Stores details like "Core Ultra 5 / 16GB RAM / 512GB SSD"
-    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    
-    INDEX idx_laptop_price_time (laptop_id, scraped_at),
-    INDEX idx_availability (availability_status)
+    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Customer reviews (simple structure for MVP)
@@ -56,10 +52,7 @@ CREATE TABLE reviews (
     review_date DATE,
     helpful_count INTEGER DEFAULT 0,
     configuration_summary TEXT, -- Stores details for the model being reviewed
-    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    
-    INDEX idx_laptop_rating (laptop_id, rating),
-    INDEX idx_review_date (review_date)
+    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Q&A section from product pages 
@@ -75,11 +68,19 @@ CREATE TABLE questions_answers (
     answer_date DATE,
     helpful_count INTEGER DEFAULT 0,
     configuration_summary TEXT, -- Stores details for the model being asked about
-    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    
-    INDEX idx_laptop_qa (laptop_id),
-    INDEX idx_qa_date (question_date)
+    scraped_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+
+-- === Indexes for Performance (Moved here from inside the tables) ===
+CREATE INDEX idx_laptop_category ON specifications (laptop_id, category);
+CREATE INDEX idx_spec_name ON specifications (specification_name);
+CREATE INDEX idx_laptop_price_time ON price_snapshots (laptop_id, scraped_at);
+CREATE INDEX idx_availability ON price_snapshots (availability_status);
+CREATE INDEX idx_laptop_rating ON reviews (laptop_id, rating);
+CREATE INDEX idx_review_date ON reviews (review_date);
+CREATE INDEX idx_laptop_qa ON questions_answers (laptop_id);
+CREATE INDEX idx_qa_date ON questions_answers (question_date);
 
 -- Triggers to update timestamps
 CREATE OR REPLACE FUNCTION update_updated_at_column()
