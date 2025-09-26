@@ -14,7 +14,8 @@ services:
       # Makes sure the data is saved even if you remove the container
       - postgres_data:/var/lib/postgresql/data
       # Automatically run schema script on the first startup
-      - ./backend/database_schema.sql:/docker-entrypoint-initdb.d/init.sql
+      # - ./backend/database_schema.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/processed/db_backup.sql:/docker-entrypoint-initdb.d/init.sql # <-- Use the backup instead
     ports:
       # Makes the database accessible from your local machine (e.g., for a GUI tool)
       - "5432:5432"

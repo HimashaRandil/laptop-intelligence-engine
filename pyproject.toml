@@ -4,19 +4,23 @@ version = "0.1.0"
 dependencies = [
     # ---- Backend API Dependencies ----
     "fastapi",
-    "uvicorn[standard]", # The server that runs FastAPI
-    "sqlalchemy",        # The ORM for our database
-    "psycopg2-binary",   # The driver that lets SQLAlchemy talk to PostgreSQL
-    "python-dotenv",     # For loading variables from the .env file
-    "pydantic-settings", # For managing settings
-    "loguru",            # For logging
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "python-dotenv",
+    "pydantic-settings",
+    "loguru",
 
     # ---- Data Ingestion Script Dependencies ----
-    "requests",          # For making HTTP requests to download PDFs/HTML
+    "requests",
     "playwright",
-    "beautifulsoup4",    # For parsing HTML
-    "PyMuPDF",           # For parsing PDF files
+    "beautifulsoup4",
+    "PyMuPDF",
 
     # ---- LLM Dependency----
-    "openai"
+    "openai",
+
+    # ---- Additional Scraping Dependencies ----
+    "fake-useragent",      # For rotating user agents
+    "python-dateutil",     # For parsing review dates
 ]
