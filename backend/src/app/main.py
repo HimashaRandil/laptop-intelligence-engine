@@ -10,6 +10,7 @@ from backend.src.app.models.specification import Specification
 from backend.src.app.models.price_snapshot import PriceSnapshot
 from backend.src.app.models.review import Review
 from backend.src.app.models.questions_answer import QuestionsAnswer
+from backend.src.app.models.views import LaptopReviewSummary, LaptopLatestPrice
 from backend.src.utils.logger.logging import logger as logging
 from backend.src.app.schemas.laptop import (
     Laptop as LaptopSchema,
@@ -82,41 +83,35 @@ def get_laptops(
     brand: Optional[str] = Query(None, description="Filter by brand (Lenovo, HP)"),
     db: Session = Depends(get_db),
 ):
-    """Get list of all laptops with basic info and latest pricing."""
-    query = db.query(Laptop)
+    """Get list of all laptops with basic info and latest pricing/rating."""
+
+    # This single, efficient query joins the main table with our two views
+    query = (
+        db.query(Laptop, LaptopLatestPrice, LaptopReviewSummary)
+        .outerjoin(LaptopLatestPrice, Laptop.id == LaptopLatestPrice.laptop_id)
+        .outerjoin(LaptopReviewSummary, Laptop.id == LaptopReviewSummary.laptop_id)
+    )
+
     if brand:
         query = query.filter(Laptop.brand.ilike(f"%{brand}%"))
 
-    laptops = query.all()
+    results = query.all()
 
-    # Get latest price for each laptop
-    result = []
-    for laptop in laptops:
-        # Get most recent price snapshot
-        latest_price_snapshot = (
-            db.query(PriceSnapshot)
-            .filter(PriceSnapshot.laptop_id == laptop.id)
-            .order_by(PriceSnapshot.scraped_at.desc())
-            .first()
+    # Combine the results into our Pydantic schema
+    laptops_with_details = []
+    for laptop, price_info, review_info in results:
+        laptop_data = laptop.__dict__
+        laptop_data["latest_price"] = price_info.price if price_info else None
+        laptop_data["availability"] = (
+            price_info.availability_status if price_info else None
         )
-        result.append(
-            LaptopSimple(
-                id=laptop.id,
-                brand=laptop.brand,
-                full_model_name=laptop.full_model_name,
-                image_url=laptop.image_url,
-                latest_price=(
-                    latest_price_snapshot.price if latest_price_snapshot else None
-                ),
-                availability=(
-                    latest_price_snapshot.availability_status
-                    if latest_price_snapshot
-                    else None
-                ),
-            )
+        laptop_data["average_rating"] = (
+            review_info.average_rating if review_info else None
         )
+        laptop_data["review_count"] = review_info.total_reviews if review_info else None
+        laptops_with_details.append(LaptopSimple(**laptop_data))
 
-    return result
+    return laptops_with_details
 
 
 # Get detailed laptop information

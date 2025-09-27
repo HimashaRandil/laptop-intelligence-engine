@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from datetime import date
+from datetime import datetime
 from typing import List, Optional, Any
 
 
@@ -20,7 +20,7 @@ class PriceSnapshotBase(BaseModel):
     currency: str
     availability_status: Optional[str] = None
     configuration_summary: Optional[str] = None
-    scraped_at: str
+    scraped_at: datetime
 
     class Config:
         from_attributes = True
@@ -42,8 +42,8 @@ class QuestionsAnswerBase(BaseModel):
     answer_text: Optional[str] = None
     asker_name: Optional[str] = None
     answerer_name: Optional[str] = None
-    question_date: Optional[date] = None
-    answer_date: Optional[date] = None
+    question_date: Optional[datetime] = None
+    answer_date: Optional[datetime] = None
     helpful_count: int = 0
     configuration_summary: Optional[str] = None
 
@@ -77,9 +77,11 @@ class LaptopSimple(BaseModel):
     full_model_name: str
     image_url: Optional[str] = None
 
-    # Include the most recent price from our database view
+    # Add the new fields for rating and price
     latest_price: Optional[float] = None
     availability: Optional[str] = None
+    average_rating: Optional[float] = None
+    review_count: Optional[int] = None
 
     class Config:
         from_attributes = True
