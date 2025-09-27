@@ -12,7 +12,7 @@ interface ProductCardProps {
     modelName: string;
     price: number;
     average_rating: number | null;
-    reviewCount: number | null;
+    review_count: number | null;
 }
 
 export function ProductCard(props: ProductCardProps) {
