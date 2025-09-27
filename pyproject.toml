@@ -21,6 +21,17 @@ dependencies = [
     "openai",
 
     # ---- Additional Scraping Dependencies ----
-    "fake-useragent",      # For rotating user agents
-    "python-dateutil",     # For parsing review dates
+    "fake-useragent",
+    "python-dateutil",
+    
+    # ---- Vector Database & Embeddings ----
+    "chromadb",
+    "fastembed",
+    "sentence-transformers",
+
+    # ---- LangChain Framework ----
+    "langchain",
+    "langchain-openai",
+    "langgraph",
+    "langchain-community",
 ]
