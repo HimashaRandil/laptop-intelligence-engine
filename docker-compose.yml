@@ -1,26 +1,94 @@
 version: '3.8'
 
 services:
-  
+  # PostgreSQL Database
   db:
     image: postgres:15-alpine
     container_name: laptop_db
     environment:
-      # These variables are read from .env file
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     volumes:
-      # Makes sure the data is saved even if you remove the container
       - postgres_data:/var/lib/postgresql/data
-      # Automatically run schema script on the first startup
       # - ./backend/database_schema.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./data/processed/db_backup.sql:/docker-entrypoint-initdb.d/init.sql # <-- Use the backup instead
+      - ./data/processed/db_backup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      # Makes the database accessible from your local machine (e.g., for a GUI tool)
       - "5432:5432"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-# Defines the named volume for persistent data storage
+  # Backend API Service
+  backend-api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: laptop_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # AI Service
+  ai-service:
+    build:
+      context: .
+      dockerfile: ai_services/Dockerfile
+    container_name: laptop_ai
+    ports:
+      - "8001:8001"
+    environment:
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DEFAULT_MODEL=${DEFAULT_MODEL:-gpt-4}
+      - TEMPERATURE=${TEMPERATURE:-0.1}
+    depends_on:
+      db:
+        condition: service_healthy
+      backend-api:
+        condition: service_healthy
+    volumes:
+      - ./backend/data/vector_db:/app/data/vector_db:ro
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/ai/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: laptop_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_AI_API_URL=http://localhost:8001
+    depends_on:
+      backend-api:
+        condition: service_healthy
+      ai-service:
+        condition: service_healthy
+    restart: unless-stopped
+
 volumes:
   postgres_data:
