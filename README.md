@@ -12,6 +12,9 @@ Database Schema Documentation: [Click Here](https://github.com/HimashaRandil/lap
 API Documentation: [Click Here](https://github.com/HimashaRandil/laptop-intelligence-engine/blob/956d1216558bcdcc96fabf45ed1f79b8825c8e71/docs/api.md)
 
 
+Generated Dataset: [Click Here](https://github.com/HimashaRandil/laptop-intelligence-engine/blob/98d63d48e6eda7be8fb90e744ee7d51847acd89d/data/processed/db_backup.sql)
+
+
 
 ## 🏗️ Architecture Overview
 
