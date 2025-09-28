@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict Ha57yTEqbL1zDTSkq9PUT5xiuBcJzQtnur26mncY71y8Pg2XAtvOckzZlnc9XKE
+\restrict Jt7KDDBldpjcl7MexDpX94dJQuCQyedjewrikVGywwNWdUWMwiAgMDVcb20M1QD
 
 -- Dumped from database version 15.14
 -- Dumped by pg_dump version 15.14
@@ -342,68 +342,50 @@ COPY public.laptops (id, brand, model_name, variant, full_model_name, product_pa
 --
 
 COPY public.price_snapshots (id, laptop_id, price, currency, availability_status, shipping_info, promotion_text, configuration_summary, scraped_at) FROM stdin;
-127	4	724.22	USD	Out of Stock	\N	\N	\N	2025-08-27 15:50:22.831742+00
-128	4	747.97	USD	In Stock	\N	\N	\N	2025-08-28 15:50:22.83187+00
-129	4	752.58	USD	In Stock	\N	\N	\N	2025-08-29 15:50:22.831901+00
-130	4	753.14	USD	In Stock	\N	\N	\N	2025-08-30 15:50:22.831922+00
-131	4	709.81	USD	In Stock	\N	\N	\N	2025-08-31 15:50:22.831938+00
-132	4	764.94	USD	Limited Stock	\N	\N	\N	2025-09-01 15:50:22.831954+00
-133	4	769.62	USD	In Stock	\N	\N	\N	2025-09-02 15:50:22.831968+00
-134	4	734.45	USD	In Stock	\N	\N	\N	2025-09-03 15:50:22.83198+00
-135	4	766.10	USD	In Stock	\N	\N	\N	2025-09-04 15:50:22.831993+00
-136	4	789.15	USD	In Stock	\N	\N	\N	2025-09-05 15:50:22.832005+00
-137	4	780.93	USD	Out of Stock	\N	\N	\N	2025-09-06 15:50:22.832016+00
-138	4	738.64	USD	In Stock	\N	\N	\N	2025-09-07 15:50:22.832028+00
-139	4	789.59	USD	In Stock	\N	\N	\N	2025-09-08 15:50:22.832041+00
-140	4	711.61	USD	In Stock	\N	\N	\N	2025-09-09 15:50:22.832056+00
-141	4	737.78	USD	Limited Stock	\N	\N	\N	2025-09-10 15:50:22.832067+00
-142	4	770.64	USD	In Stock	\N	\N	\N	2025-09-11 15:50:22.832078+00
-143	4	754.67	USD	In Stock	\N	\N	\N	2025-09-12 15:50:22.832089+00
-144	4	782.60	USD	In Stock	\N	\N	\N	2025-09-13 15:50:22.832101+00
-145	4	762.10	USD	In Stock	\N	\N	\N	2025-09-14 15:50:22.832112+00
-146	4	798.82	USD	In Stock	\N	\N	\N	2025-09-15 15:50:22.832123+00
-147	4	718.50	USD	In Stock	\N	\N	\N	2025-09-16 15:50:22.832133+00
-148	4	765.61	USD	Out of Stock	\N	\N	\N	2025-09-17 15:50:22.832144+00
-149	4	758.04	USD	In Stock	\N	\N	\N	2025-09-18 15:50:22.832156+00
-150	4	780.21	USD	In Stock	\N	\N	\N	2025-09-19 15:50:22.832177+00
-151	4	737.68	USD	Limited Stock	\N	\N	\N	2025-09-20 15:50:22.8322+00
-152	4	760.99	USD	Out of Stock	\N	\N	\N	2025-09-21 15:50:22.832213+00
-153	4	794.10	USD	Out of Stock	\N	\N	\N	2025-09-22 15:50:22.832224+00
-154	4	715.93	USD	In Stock	\N	\N	\N	2025-09-23 15:50:22.832237+00
-155	4	704.64	USD	In Stock	\N	\N	\N	2025-09-24 15:50:22.832248+00
-156	4	792.45	USD	In Stock	\N	\N	\N	2025-09-25 15:50:22.83226+00
-157	3	946.10	USD	In Stock	\N	\N	\N	2025-08-27 15:50:22.833323+00
-158	3	934.76	USD	In Stock	\N	\N	\N	2025-08-28 15:50:22.83339+00
-159	3	900.74	USD	Out of Stock	\N	\N	\N	2025-08-29 15:50:22.83342+00
-160	3	926.29	USD	In Stock	\N	\N	\N	2025-08-30 15:50:22.833441+00
-161	3	891.39	USD	In Stock	\N	\N	\N	2025-08-31 15:50:22.83346+00
-162	3	912.52	USD	In Stock	\N	\N	\N	2025-09-01 15:50:22.833478+00
-163	3	892.16	USD	Limited Stock	\N	\N	\N	2025-09-02 15:50:22.833502+00
-164	3	881.97	USD	In Stock	\N	\N	\N	2025-09-03 15:50:22.83352+00
-165	3	859.33	USD	In Stock	\N	\N	\N	2025-09-04 15:50:22.833538+00
-166	3	930.33	USD	In Stock	\N	\N	\N	2025-09-05 15:50:22.833555+00
-167	3	859.66	USD	Out of Stock	\N	\N	\N	2025-09-06 15:50:22.833572+00
-168	3	866.45	USD	In Stock	\N	\N	\N	2025-09-07 15:50:22.833588+00
-169	3	851.65	USD	In Stock	\N	\N	\N	2025-09-08 15:50:22.833606+00
-170	3	868.67	USD	In Stock	\N	\N	\N	2025-09-09 15:50:22.833625+00
-171	3	882.59	USD	Out of Stock	\N	\N	\N	2025-09-10 15:50:22.833641+00
-172	3	907.83	USD	Out of Stock	\N	\N	\N	2025-09-11 15:50:22.833657+00
-173	3	944.03	USD	In Stock	\N	\N	\N	2025-09-12 15:50:22.833674+00
-174	3	884.97	USD	In Stock	\N	\N	\N	2025-09-13 15:50:22.833693+00
-175	3	944.41	USD	In Stock	\N	\N	\N	2025-09-14 15:50:22.833709+00
-176	3	882.30	USD	In Stock	\N	\N	\N	2025-09-15 15:50:22.833725+00
-177	3	871.06	USD	In Stock	\N	\N	\N	2025-09-16 15:50:22.833741+00
-178	3	944.20	USD	Limited Stock	\N	\N	\N	2025-09-17 15:50:22.833764+00
-179	3	868.59	USD	In Stock	\N	\N	\N	2025-09-18 15:50:22.833781+00
-180	3	903.57	USD	Limited Stock	\N	\N	\N	2025-09-19 15:50:22.833798+00
-181	3	896.34	USD	In Stock	\N	\N	\N	2025-09-20 15:50:22.833813+00
-182	3	880.97	USD	Out of Stock	\N	\N	\N	2025-09-21 15:50:22.833837+00
-183	3	854.31	USD	In Stock	\N	\N	\N	2025-09-22 15:50:22.833856+00
-184	3	912.70	USD	Limited Stock	\N	\N	\N	2025-09-23 15:50:22.833873+00
-185	3	881.05	USD	In Stock	\N	\N	\N	2025-09-24 15:50:22.833892+00
-186	3	928.70	USD	In Stock	\N	\N	\N	2025-09-25 15:50:22.833912+00
-187	2	1000.00	USD	In Stock	\N	\N	\N	2025-09-26 15:52:23.834895+00
-188	1	1019.00	USD	In Stock	\N	\N	\N	2025-09-26 15:54:30.227379+00
+189	1	1019.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-25 19:32:07.098972+00
+190	1	1024.99	USD	In Stock	Free shipping, 3-5 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-23 19:32:07.098972+00
+191	1	999.99	USD	In Stock	Free shipping, 3-5 business days	2% off limited time	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-19 19:32:07.098972+00
+192	1	1149.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-25 19:32:07.098972+00
+193	1	1159.99	USD	Limited Stock	Free shipping, 5-7 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-21 19:32:07.098972+00
+194	1	1299.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i7-1360P / 16GB RAM / 1TB SSD	2025-09-24 19:32:07.098972+00
+195	2	899.00	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-25 19:32:07.098972+00
+196	2	919.99	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-22 19:32:07.098972+00
+197	2	849.99	USD	In Stock	Free shipping, 3-5 business days	Early bird special	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-16 19:32:07.098972+00
+198	2	1049.00	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-25 19:32:07.098972+00
+199	2	1079.99	USD	Limited Stock	Free shipping, 5-7 business days	\N	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-20 19:32:07.098972+00
+200	3	899.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-25 19:32:07.098972+00
+201	3	924.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-21 19:32:07.098972+00
+202	3	879.99	USD	In Stock	Free shipping, 2-4 business days	Volume discount available	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-18 19:32:07.098972+00
+203	3	1199.00	USD	In Stock	Free shipping, 2-4 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-24 19:32:07.098972+00
+204	3	1299.99	USD	Limited Stock	Free shipping, 4-6 business days	\N	Core i7-1360P / 32GB RAM / 1TB SSD	2025-09-23 19:32:07.098972+00
+205	4	749.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-25 19:32:07.098972+00
+206	4	769.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-20 19:32:07.098972+00
+207	4	719.99	USD	In Stock	Free shipping, 2-4 business days	Back to business sale	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-14 19:32:07.098972+00
+208	4	999.00	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-25 19:32:07.098972+00
+209	4	1149.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 7 155H / 16GB RAM / 1TB SSD	2025-09-22 19:32:07.098972+00
+210	4	1399.99	USD	Limited Stock	Free shipping, 4-6 business days	\N	Core Ultra 7 155H / 32GB RAM / 1TB SSD + RTX 2050	2025-09-19 19:32:07.098972+00
+211	1	1019.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-25 19:32:31.32782+00
+212	1	1024.99	USD	In Stock	Free shipping, 3-5 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-23 19:32:31.32782+00
+213	1	999.99	USD	In Stock	Free shipping, 3-5 business days	2% off limited time	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-19 19:32:31.32782+00
+214	1	1149.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-25 19:32:31.32782+00
+215	1	1159.99	USD	Limited Stock	Free shipping, 5-7 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-21 19:32:31.32782+00
+216	1	1299.00	USD	In Stock	Free shipping, 3-5 business days	\N	Core i7-1360P / 16GB RAM / 1TB SSD	2025-09-24 19:32:31.32782+00
+217	2	899.00	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-25 19:32:31.32782+00
+218	2	919.99	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-22 19:32:31.32782+00
+219	2	849.99	USD	In Stock	Free shipping, 3-5 business days	Early bird special	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-16 19:32:31.32782+00
+220	2	1049.00	USD	In Stock	Free shipping, 3-5 business days	\N	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-25 19:32:31.32782+00
+221	2	1079.99	USD	Limited Stock	Free shipping, 5-7 business days	\N	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-20 19:32:31.32782+00
+222	3	899.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-25 19:32:31.32782+00
+223	3	924.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-21 19:32:31.32782+00
+224	3	879.99	USD	In Stock	Free shipping, 2-4 business days	Volume discount available	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-18 19:32:31.32782+00
+225	3	1199.00	USD	In Stock	Free shipping, 2-4 business days	\N	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-24 19:32:31.32782+00
+226	3	1299.99	USD	Limited Stock	Free shipping, 4-6 business days	\N	Core i7-1360P / 32GB RAM / 1TB SSD	2025-09-23 19:32:31.32782+00
+227	4	749.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-25 19:32:31.32782+00
+228	4	769.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-20 19:32:31.32782+00
+229	4	719.99	USD	In Stock	Free shipping, 2-4 business days	Back to business sale	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-14 19:32:31.32782+00
+230	4	999.00	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-25 19:32:31.32782+00
+231	4	1149.99	USD	In Stock	Free shipping, 2-4 business days	\N	Core Ultra 7 155H / 16GB RAM / 1TB SSD	2025-09-22 19:32:31.32782+00
+232	4	1399.99	USD	Limited Stock	Free shipping, 4-6 business days	\N	Core Ultra 7 155H / 32GB RAM / 1TB SSD + RTX 2050	2025-09-19 19:32:31.32782+00
 \.
 
 
@@ -412,6 +394,34 @@ COPY public.price_snapshots (id, laptop_id, price, currency, availability_status
 --
 
 COPY public.questions_answers (id, laptop_id, question_text, answer_text, asker_name, answerer_name, question_date, answer_date, helpful_count, configuration_summary, scraped_at) FROM stdin;
+1	1	Can this laptop handle video editing for business presentations?	Yes, it handles basic video editing well. I use it for creating training videos and marketing content. The integrated graphics are sufficient for 1080p editing in tools like Premiere Pro or DaVinci Resolve, though render times are moderate.	MarketingManager_Pete	VideoProducer_Kate	2025-09-01	2025-09-03	8	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+2	1	How is the keyboard for programming work?	Excellent! The ThinkPad keyboard is legendary for a reason. Great key travel, responsive, and the layout is perfect for coding. The trackpoint is also handy for precise cursor control without leaving the home row.	NewDeveloper_Sam	SeniorDev_Lisa	2025-08-15	2025-08-17	15	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+3	1	Is 8GB RAM enough for business use?	8GB is adequate for basic business tasks, but I'd recommend 16GB if you do heavy multitasking or run VMs. The good news is this model supports up to 40GB so you can upgrade later.	ProcurementManager	ITAdmin_Jake	2025-07-30	2025-08-01	12	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+4	1	How does it compare to the AMD version?	Both are great. Intel version has slightly better single-core performance and Thunderbolt support. AMD version offers better battery life and integrated graphics. Choose based on your priorities.	TechBuyer_Anna	LaptopExpert_Mike	2025-07-15	2025-07-17	19	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+5	2	How is gaming performance on this laptop?	Not designed for gaming, but the AMD integrated graphics can handle light gaming and older titles at low-medium settings. Fine for casual games during breaks, but don't expect AAA gaming performance.	OfficeGamer_Tom	TechReviewer_Sarah	2025-08-24	2025-08-26	6	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+6	2	Can I connect three external monitors?	Yes, with the USB-C ports supporting DisplayPort you can run dual external monitors plus the laptop screen. For three external monitors, you might need a docking station.	MultiMonitor_User	ITSupport_David	2025-08-08	2025-08-10	11	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+7	2	Battery life for all-day meetings?	Absolutely. I regularly get 10-12 hours with typical office work and video calls. The AMD processor is very power efficient. Perfect for long conference days without hunting for outlets.	ExecutiveAssistant	FrequentFlyer_Mark	2025-07-23	2025-07-25	17	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+8	3	Is the 15.6" screen too big for travel?	It's definitely larger than ultrabooks, but still manageable for travel. I take mine on business trips regularly. The extra screen real estate is worth it for productivity. Fits in most laptop bags without issue.	BusinessTraveler_Jane	RoadWarrior_Bob	2025-08-30	2025-09-01	9	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+9	3	How does HP support compare to Lenovo?	HP business support has been solid in my experience. Response times are good and they understand enterprise needs. Both HP and Lenovo have good business support - comes down to personal preference.	ITManager_Susan	TechProcurement_Al	2025-08-13	2025-08-15	13	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+10	3	Can this run CAD software?	For light CAD work, yes. I use it for AutoCAD 2D and basic 3D modeling. The integrated graphics handle simple models fine, but for heavy 3D work you'd want a laptop with dedicated graphics.	Engineer_Carlos	CAD_Specialist_Amy	2025-07-27	2025-07-29	7	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+11	4	What are the AI features in Core Ultra?	The Core Ultra has a dedicated NPU (Neural Processing Unit) for AI workloads. Currently used for things like Windows Studio Effects, background blur in video calls, and some productivity features. More AI apps coming.	TechCurious_Pat	AIEnthusiast_Jordan	2025-09-07	2025-09-09	14	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+12	4	How does build quality compare to ThinkPad?	Both are well-built business laptops. ThinkPad has a more utilitarian design and the famous keyboard. HP ProBook is more modern looking with good build quality. Both are reliable for business use.	LaptopShopper_Ben	BusinessUser_Carol	2025-08-21	2025-08-23	16	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+13	4	Is the RTX 2050 worth the upgrade?	If you do any graphics work, light gaming, or 3D modeling, yes. For pure business use, the integrated graphics are sufficient. The RTX 2050 adds capability but also cost and reduced battery life.	GraphicsUser_Maya	TechAdvisor_Steve	2025-08-04	2025-08-06	10	Core Ultra 7 155H / 16GB RAM / 1TB SSD + RTX 2050	2025-09-26 19:32:07.098972+00
+14	4	Recommended for data science work?	The Core Ultra performs well for data analysis and machine learning. 16GB RAM is adequate for medium datasets. The NPU can accelerate some AI workloads. For heavy ML training, you'd want more RAM and possibly discrete GPU.	DataScientist_Raj	MLEngineer_Emma	2025-07-18	2025-07-20	18	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+15	1	Can this laptop handle video editing for business presentations?	Yes, it handles basic video editing well. I use it for creating training videos and marketing content. The integrated graphics are sufficient for 1080p editing in tools like Premiere Pro or DaVinci Resolve, though render times are moderate.	MarketingManager_Pete	VideoProducer_Kate	2025-09-01	2025-09-03	8	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+16	1	How is the keyboard for programming work?	Excellent! The ThinkPad keyboard is legendary for a reason. Great key travel, responsive, and the layout is perfect for coding. The trackpoint is also handy for precise cursor control without leaving the home row.	NewDeveloper_Sam	SeniorDev_Lisa	2025-08-15	2025-08-17	15	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+17	1	Is 8GB RAM enough for business use?	8GB is adequate for basic business tasks, but I'd recommend 16GB if you do heavy multitasking or run VMs. The good news is this model supports up to 40GB so you can upgrade later.	ProcurementManager	ITAdmin_Jake	2025-07-30	2025-08-01	12	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+18	1	How does it compare to the AMD version?	Both are great. Intel version has slightly better single-core performance and Thunderbolt support. AMD version offers better battery life and integrated graphics. Choose based on your priorities.	TechBuyer_Anna	LaptopExpert_Mike	2025-07-15	2025-07-17	19	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+19	2	How is gaming performance on this laptop?	Not designed for gaming, but the AMD integrated graphics can handle light gaming and older titles at low-medium settings. Fine for casual games during breaks, but don't expect AAA gaming performance.	OfficeGamer_Tom	TechReviewer_Sarah	2025-08-24	2025-08-26	6	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+20	2	Can I connect three external monitors?	Yes, with the USB-C ports supporting DisplayPort you can run dual external monitors plus the laptop screen. For three external monitors, you might need a docking station.	MultiMonitor_User	ITSupport_David	2025-08-08	2025-08-10	11	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+21	2	Battery life for all-day meetings?	Absolutely. I regularly get 10-12 hours with typical office work and video calls. The AMD processor is very power efficient. Perfect for long conference days without hunting for outlets.	ExecutiveAssistant	FrequentFlyer_Mark	2025-07-23	2025-07-25	17	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+22	3	Is the 15.6" screen too big for travel?	It's definitely larger than ultrabooks, but still manageable for travel. I take mine on business trips regularly. The extra screen real estate is worth it for productivity. Fits in most laptop bags without issue.	BusinessTraveler_Jane	RoadWarrior_Bob	2025-08-30	2025-09-01	9	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+23	3	How does HP support compare to Lenovo?	HP business support has been solid in my experience. Response times are good and they understand enterprise needs. Both HP and Lenovo have good business support - comes down to personal preference.	ITManager_Susan	TechProcurement_Al	2025-08-13	2025-08-15	13	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+24	3	Can this run CAD software?	For light CAD work, yes. I use it for AutoCAD 2D and basic 3D modeling. The integrated graphics handle simple models fine, but for heavy 3D work you'd want a laptop with dedicated graphics.	Engineer_Carlos	CAD_Specialist_Amy	2025-07-27	2025-07-29	7	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+25	4	What are the AI features in Core Ultra?	The Core Ultra has a dedicated NPU (Neural Processing Unit) for AI workloads. Currently used for things like Windows Studio Effects, background blur in video calls, and some productivity features. More AI apps coming.	TechCurious_Pat	AIEnthusiast_Jordan	2025-09-07	2025-09-09	14	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+26	4	How does build quality compare to ThinkPad?	Both are well-built business laptops. ThinkPad has a more utilitarian design and the famous keyboard. HP ProBook is more modern looking with good build quality. Both are reliable for business use.	LaptopShopper_Ben	BusinessUser_Carol	2025-08-21	2025-08-23	16	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+27	4	Is the RTX 2050 worth the upgrade?	If you do any graphics work, light gaming, or 3D modeling, yes. For pure business use, the integrated graphics are sufficient. The RTX 2050 adds capability but also cost and reduced battery life.	GraphicsUser_Maya	TechAdvisor_Steve	2025-08-04	2025-08-06	10	Core Ultra 7 155H / 16GB RAM / 1TB SSD + RTX 2050	2025-09-26 19:32:31.32782+00
+28	4	Recommended for data science work?	The Core Ultra performs well for data analysis and machine learning. 16GB RAM is adequate for medium datasets. The NPU can accelerate some AI workloads. For heavy ML training, you'd want more RAM and possibly discrete GPU.	DataScientist_Raj	MLEngineer_Emma	2025-07-18	2025-07-20	18	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
 \.
 
 
@@ -420,35 +430,50 @@ COPY public.questions_answers (id, laptop_id, question_text, answer_text, asker_
 --
 
 COPY public.reviews (id, laptop_id, rating, review_title, review_text, reviewer_name, reviewer_verified, review_date, helpful_count, configuration_summary, scraped_at) FROM stdin;
-77	4	5	\N	Deployed these across our organization. Great reliability, security features work well, and the price point is competitive for business use.	ITManager_Sarah	f	2025-06-16	0	\N	2025-09-26 10:20:22.827844+00
-78	4	4	\N	Runs Excel, QuickBooks, and other accounting software without issues. Good keyboard for data entry. Reliable for daily financial work.	AccountantPro	f	2025-07-11	0	\N	2025-09-26 10:20:22.827844+00
-79	4	4	\N	Solid business laptop. The build quality is excellent and performance handles all my office tasks smoothly. Battery life gets me through a full workday.	BusinessUser2024	f	2025-05-25	0	\N	2025-09-26 10:20:22.827844+00
-80	4	5	\N	Perfect travel companion. Lightweight enough for constant travel, battery lasts through client meetings, and it's professional looking.	ConsultantLife	f	2025-08-14	0	\N	2025-09-26 10:20:22.827844+00
-81	4	3	\N	Does what it needs to do. Not fancy but functional. Good for Microsoft Office suite and web-based project management tools.	ProjectManager_Mike	f	2025-08-11	0	\N	2025-09-26 10:20:22.827844+00
-82	4	4	\N	Good for remote work setup. Screen quality is decent, keyboard is comfortable for long typing sessions. Webcam quality could be better.	RemoteWorker	f	2025-09-15	0	\N	2025-09-26 10:20:22.827844+00
-83	4	3	\N	Decent performance for the price range. Not the fastest but gets the job done. Would recommend for basic business tasks.	TechReviewer	f	2025-08-29	0	\N	2025-09-26 10:20:22.827844+00
-84	3	3	\N	Does what it needs to do. Not fancy but functional. Good for Microsoft Office suite and web-based project management tools.	ProjectManager_Mike	f	2025-07-25	0	\N	2025-09-26 10:20:22.827844+00
-85	3	4	\N	Good for remote work setup. Screen quality is decent, keyboard is comfortable for long typing sessions. Webcam quality could be better.	RemoteWorker	f	2025-07-13	0	\N	2025-09-26 10:20:22.827844+00
-86	3	4	\N	Solid business laptop. The build quality is excellent and performance handles all my office tasks smoothly. Battery life gets me through a full workday.	BusinessUser2024	f	2025-08-11	0	\N	2025-09-26 10:20:22.827844+00
-87	3	4	\N	Runs Excel, QuickBooks, and other accounting software without issues. Good keyboard for data entry. Reliable for daily financial work.	AccountantPro	f	2025-05-26	0	\N	2025-09-26 10:20:22.827844+00
-88	3	5	\N	Deployed these across our organization. Great reliability, security features work well, and the price point is competitive for business use.	ITManager_Sarah	f	2025-04-13	0	\N	2025-09-26 10:20:22.827844+00
-89	2	4	\N	The laptop is easy to use, compact and the Apps, programs and software all run smoothly.	ReviewUser1	f	2025-08-21	0	\N	2025-09-26 10:22:10.109668+00
-90	2	3	\N	keyboard is responsive and the backlit function is useful.	ReviewUser2	f	2025-06-18	0	\N	2025-09-26 10:22:10.109668+00
-91	1	5	\N	the laptop was expected to have backlight keyboard (based on sales confirmation before placing the order) but it didn't.	ReviewUser1	f	2025-04-28	0	\N	2025-09-26 10:24:22.275522+00
-92	1	4	\N	The laptop is used in an office environment.	ReviewUser2	f	2025-07-21	0	\N	2025-09-26 10:24:22.275522+00
-93	1	5	\N	I can do my work with the convenient trackpad and touchscreen.	ReviewUser3	f	2025-04-25	0	\N	2025-09-26 10:24:22.275522+00
-94	1	3	\N	This laptop was purchased for the new boss.	ReviewUser4	f	2025-08-30	0	\N	2025-09-26 10:24:22.275522+00
-95	1	3	\N	This computer is fast, a good size, great for all my work databases.	ReviewUser5	f	2025-07-05	0	\N	2025-09-26 10:24:22.275522+00
-96	1	5	\N	I can multitask and do all my work without any issue because of the speed.	ReviewUser6	f	2025-07-25	0	\N	2025-09-26 10:24:22.275522+00
-97	1	4	\N	The laptop works well and provides the functions I need.	ReviewUser7	f	2025-06-25	0	\N	2025-09-26 10:24:22.275522+00
-98	1	5	\N	I was again impressed with the quality and function of this laptop.	ReviewUser8	f	2025-06-20	0	\N	2025-09-26 10:24:22.275522+00
-99	1	4	\N	The laptop is great, love the configuration and design.	ReviewUser9	f	2025-09-21	0	\N	2025-09-26 10:24:22.275522+00
-100	1	3	\N	Great laptop built for work/educational use.	ReviewUser10	f	2025-05-05	0	\N	2025-09-26 10:24:22.275522+00
-101	1	4	\N	amazing laptop and I highly recommend.	ReviewUser11	f	2025-05-03	0	\N	2025-09-26 10:24:22.275522+00
-102	1	5	\N	Good laptop overall, Easy to set up.	ReviewUser12	f	2025-05-07	0	\N	2025-09-26 10:24:22.275522+00
-103	1	5	\N	Great Laptop with awesome configurations.	ReviewUser13	f	2025-04-02	0	\N	2025-09-26 10:24:22.275522+00
-104	1	4	\N	keyboard is excellent, and the build quality feels sturdy.	ReviewUser14	f	2025-04-03	0	\N	2025-09-26 10:24:22.275522+00
-105	1	5	\N	build quality is premium, and its performance is excellent for my office work.	ReviewUser15	f	2025-07-28	0	\N	2025-09-26 10:24:22.275522+00
+106	1	5	Excellent business laptop	Been using this ThinkPad for 6 months now and it's been rock solid. The keyboard is fantastic for long coding sessions, battery easily lasts a full workday, and the build quality feels premium. The trackpoint takes some getting used to but becomes very efficient. Highly recommend for business use.	TechManager_Sarah	t	2025-09-12	23	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+107	1	4	Good value for enterprise deployment	We deployed 50 of these across our organization. Overall very satisfied - good performance for office apps, reliable, and the IT department likes the management features. Only complaint is the screen could be brighter for outdoor use. Great price point for business laptops.	ITDirector_Mike	t	2025-08-29	18	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+108	1	5	Perfect for remote work	Working from home setup and this laptop handles everything I throw at it. Multiple browser tabs, video calls, Office suite - no lag. The webcam quality is decent and microphone picks up voice clearly. Ports are perfect - no dongles needed. Love the matte display.	RemoteWorker_Alex	t	2025-08-12	31	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+109	1	3	Decent but not exceptional	It's a solid business laptop but nothing that wow's you. Performance is adequate, build quality is good but not amazing. The fan can get loud under heavy load. For the price it's reasonable but there are probably better options out there.	BusinessUser123	f	2025-07-21	8	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+110	1	4	Great keyboard, average everything else	The keyboard is definitely the highlight - very comfortable for typing. Performance is fine for business apps but can slow down with heavy multitasking. Battery life is good, usually get 7-8 hours. Build quality feels solid. Would buy again.	WriterPro	t	2025-06-29	15	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+111	1	5	ThinkPad reliability continues	This is my 4th ThinkPad over the years and the quality remains consistent. Fast boot times, responsive performance, excellent security features. The spill-resistant keyboard has already saved me once. Worth every penny for business use.	CorpConsultant	t	2025-06-06	27	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+112	2	5	AMD performance exceeds expectations	The Ryzen processor in this ThinkPad is fantastic. Much better performance per dollar compared to Intel variants. Battery life is excellent - easily 10+ hours of office work. The integrated graphics are surprisingly capable. Highly recommend this configuration.	TechEnthusiast_Dave	t	2025-09-05	34	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+113	2	4	Great price-performance ratio	Chose the AMD version for better value and haven't been disappointed. Handles all my business applications smoothly, multitasking is great with 16GB RAM. The trackpoint is handy once you get used to it. Minor complaint about fan noise but overall very satisfied.	StartupFounder_Jane	t	2025-08-19	19	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+114	2	4	Solid for accounting work	Using this for accounting and financial modeling. Runs Excel with large datasets without issues, QuickBooks works perfectly. The number pad layout takes some adjustment but manageable. Good value for the performance you get.	AccountantPro	t	2025-08-01	12	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+115	2	5	Best business laptop I've owned	Upgraded from an older laptop and the difference is night and day. The AMD chip handles everything I need - development tools, VMs, multiple IDEs. Battery life is impressive and the screen quality is good. ThinkPad build quality as expected.	DevManager_Tom	t	2025-07-14	28	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+116	2	3	Good but screen could be better	Performance is solid and the laptop feels well-built. My main issue is with the display - colors seem washed out and brightness isn't great. Fine for office work but disappointing for presentations. Everything else is good though.	SalesManager_Lisa	f	2025-06-23	9	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+117	3	4	Reliable workhorse for business	Been using this HP ProBook for 8 months in a corporate environment. It's been very reliable, handles all standard business applications well. The larger 15.6" screen is nice for productivity. Good port selection means no dongles needed. Recommended for office use.	CorpUser_Mark	t	2025-08-25	22	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+118	3	5	Great value for money	Fantastic laptop for the price point. Performance is smooth for all my needs - spreadsheets, presentations, web browsing. Battery easily lasts a full day. The build quality feels premium without the premium price. Very happy with this purchase.	SmallBizOwner	t	2025-08-10	31	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+119	3	4	Good for travel and presentations	As a sales consultant who travels frequently, this laptop has been great. Not too heavy, good screen for client presentations, and reliable performance. The HP security features work well with our corporate policies. Would recommend for business travelers.	SalesConsultant_Amy	t	2025-07-25	16	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+120	3	3	Average performance, good build	It's a decent laptop but nothing extraordinary. Performance is adequate for basic tasks but can slow down with heavy multitasking. Build quality is solid though and it feels durable. For the price, it's acceptable but not impressive.	OfficeWorker_Jim	f	2025-07-07	7	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+121	3	4	Solid choice for education sector	We bought several of these for our training department. They handle educational software well, are durable enough for classroom use, and the IT team likes the manageability features. Good balance of features and cost for institutional use.	EduTech_Coordinator	t	2025-06-16	14	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+122	4	5	Intel Core Ultra is impressive	The new Core Ultra processor in this ProBook is noticeably faster than previous generations. Great for business applications and the AI features are starting to show benefits. Compact 14" form factor is perfect for portability without sacrificing performance.	TechReviewer_Sarah	t	2025-09-08	29	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+123	4	4	Perfect size for business travel	The 14" form factor hits the sweet spot between portability and usability. Fits easily in my briefcase, lightweight for travel, but screen is large enough for productive work. Performance handles all my business needs. Battery life is solid for a full day.	BusinessTraveler_John	t	2025-08-22	21	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+124	4	4	Great for hybrid work setup	Using this for hybrid work - office and home setup. The port selection is excellent for connecting to various monitors and peripherals. Performance is snappy, build quality feels premium. The HP Wolf security features integrate well with our corporate setup.	HybridWorker_Maria	t	2025-08-05	18	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+125	4	5	Excellent for development work	As a software developer, this laptop handles my workflow perfectly. The Core Ultra processor makes compilation noticeably faster. 16GB RAM handles multiple IDEs and containers without issue. The keyboard is comfortable for long coding sessions.	Developer_Chris	t	2025-07-19	33	Core Ultra 7 155H / 16GB RAM / 1TB SSD	2025-09-26 19:32:07.098972+00
+126	4	3	Good but expensive for what you get	It's a solid laptop with good performance and build quality. However, I feel it's slightly overpriced compared to similar spec laptops from other brands. The HP brand premium is noticeable. Performance and features are good though.	BudgetConscious_User	f	2025-07-01	11	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:07.098972+00
+127	4	4	Reliable for financial work	Using this for financial analysis and modeling. The processor handles complex Excel workbooks and financial software without issues. Screen quality is good for long work sessions. The security features give me confidence for sensitive financial data.	FinanceAnalyst_Robert	t	2025-06-14	16	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:07.098972+00
+128	1	5	Excellent business laptop	Been using this ThinkPad for 6 months now and it's been rock solid. The keyboard is fantastic for long coding sessions, battery easily lasts a full workday, and the build quality feels premium. The trackpoint takes some getting used to but becomes very efficient. Highly recommend for business use.	TechManager_Sarah	t	2025-09-12	23	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+129	1	4	Good value for enterprise deployment	We deployed 50 of these across our organization. Overall very satisfied - good performance for office apps, reliable, and the IT department likes the management features. Only complaint is the screen could be brighter for outdoor use. Great price point for business laptops.	ITDirector_Mike	t	2025-08-29	18	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+130	1	5	Perfect for remote work	Working from home setup and this laptop handles everything I throw at it. Multiple browser tabs, video calls, Office suite - no lag. The webcam quality is decent and microphone picks up voice clearly. Ports are perfect - no dongles needed. Love the matte display.	RemoteWorker_Alex	t	2025-08-12	31	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+131	1	3	Decent but not exceptional	It's a solid business laptop but nothing that wow's you. Performance is adequate, build quality is good but not amazing. The fan can get loud under heavy load. For the price it's reasonable but there are probably better options out there.	BusinessUser123	f	2025-07-21	8	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+132	1	4	Great keyboard, average everything else	The keyboard is definitely the highlight - very comfortable for typing. Performance is fine for business apps but can slow down with heavy multitasking. Battery life is good, usually get 7-8 hours. Build quality feels solid. Would buy again.	WriterPro	t	2025-06-29	15	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+133	1	5	ThinkPad reliability continues	This is my 4th ThinkPad over the years and the quality remains consistent. Fast boot times, responsive performance, excellent security features. The spill-resistant keyboard has already saved me once. Worth every penny for business use.	CorpConsultant	t	2025-06-06	27	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+134	2	5	AMD performance exceeds expectations	The Ryzen processor in this ThinkPad is fantastic. Much better performance per dollar compared to Intel variants. Battery life is excellent - easily 10+ hours of office work. The integrated graphics are surprisingly capable. Highly recommend this configuration.	TechEnthusiast_Dave	t	2025-09-05	34	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+135	2	4	Great price-performance ratio	Chose the AMD version for better value and haven't been disappointed. Handles all my business applications smoothly, multitasking is great with 16GB RAM. The trackpoint is handy once you get used to it. Minor complaint about fan noise but overall very satisfied.	StartupFounder_Jane	t	2025-08-19	19	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+136	2	4	Solid for accounting work	Using this for accounting and financial modeling. Runs Excel with large datasets without issues, QuickBooks works perfectly. The number pad layout takes some adjustment but manageable. Good value for the performance you get.	AccountantPro	t	2025-08-01	12	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+137	2	5	Best business laptop I've owned	Upgraded from an older laptop and the difference is night and day. The AMD chip handles everything I need - development tools, VMs, multiple IDEs. Battery life is impressive and the screen quality is good. ThinkPad build quality as expected.	DevManager_Tom	t	2025-07-14	28	Ryzen 7 7730U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+138	2	3	Good but screen could be better	Performance is solid and the laptop feels well-built. My main issue is with the display - colors seem washed out and brightness isn't great. Fine for office work but disappointing for presentations. Everything else is good though.	SalesManager_Lisa	f	2025-06-23	9	Ryzen 5 7430U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+139	3	4	Reliable workhorse for business	Been using this HP ProBook for 8 months in a corporate environment. It's been very reliable, handles all standard business applications well. The larger 15.6" screen is nice for productivity. Good port selection means no dongles needed. Recommended for office use.	CorpUser_Mark	t	2025-08-25	22	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+140	3	5	Great value for money	Fantastic laptop for the price point. Performance is smooth for all my needs - spreadsheets, presentations, web browsing. Battery easily lasts a full day. The build quality feels premium without the premium price. Very happy with this purchase.	SmallBizOwner	t	2025-08-10	31	Core i7-1355U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+141	3	4	Good for travel and presentations	As a sales consultant who travels frequently, this laptop has been great. Not too heavy, good screen for client presentations, and reliable performance. The HP security features work well with our corporate policies. Would recommend for business travelers.	SalesConsultant_Amy	t	2025-07-25	16	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+142	3	3	Average performance, good build	It's a decent laptop but nothing extraordinary. Performance is adequate for basic tasks but can slow down with heavy multitasking. Build quality is solid though and it feels durable. For the price, it's acceptable but not impressive.	OfficeWorker_Jim	f	2025-07-07	7	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+143	3	4	Solid choice for education sector	We bought several of these for our training department. They handle educational software well, are durable enough for classroom use, and the IT team likes the manageability features. Good balance of features and cost for institutional use.	EduTech_Coordinator	t	2025-06-16	14	Core i5-1335U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+144	4	5	Intel Core Ultra is impressive	The new Core Ultra processor in this ProBook is noticeably faster than previous generations. Great for business applications and the AI features are starting to show benefits. Compact 14" form factor is perfect for portability without sacrificing performance.	TechReviewer_Sarah	t	2025-09-08	29	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+145	4	4	Perfect size for business travel	The 14" form factor hits the sweet spot between portability and usability. Fits easily in my briefcase, lightweight for travel, but screen is large enough for productive work. Performance handles all my business needs. Battery life is solid for a full day.	BusinessTraveler_John	t	2025-08-22	21	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+146	4	4	Great for hybrid work setup	Using this for hybrid work - office and home setup. The port selection is excellent for connecting to various monitors and peripherals. Performance is snappy, build quality feels premium. The HP Wolf security features integrate well with our corporate setup.	HybridWorker_Maria	t	2025-08-05	18	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
+147	4	5	Excellent for development work	As a software developer, this laptop handles my workflow perfectly. The Core Ultra processor makes compilation noticeably faster. 16GB RAM handles multiple IDEs and containers without issue. The keyboard is comfortable for long coding sessions.	Developer_Chris	t	2025-07-19	33	Core Ultra 7 155H / 16GB RAM / 1TB SSD	2025-09-26 19:32:31.32782+00
+148	4	3	Good but expensive for what you get	It's a solid laptop with good performance and build quality. However, I feel it's slightly overpriced compared to similar spec laptops from other brands. The HP brand premium is noticeable. Performance and features are good though.	BudgetConscious_User	f	2025-07-01	11	Core Ultra 5 125U / 8GB RAM / 256GB SSD	2025-09-26 19:32:31.32782+00
+149	4	4	Reliable for financial work	Using this for financial analysis and modeling. The processor handles complex Excel workbooks and financial software without issues. Screen quality is good for long work sessions. The security features give me confidence for sensitive financial data.	FinanceAnalyst_Robert	t	2025-06-14	16	Core Ultra 7 155U / 16GB RAM / 512GB SSD	2025-09-26 19:32:31.32782+00
 \.
 
 
@@ -603,21 +628,21 @@ SELECT pg_catalog.setval('public.laptops_id_seq', 4, true);
 -- Name: price_snapshots_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.price_snapshots_id_seq', 188, true);
+SELECT pg_catalog.setval('public.price_snapshots_id_seq', 232, true);
 
 
 --
 -- Name: questions_answers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.questions_answers_id_seq', 1, false);
+SELECT pg_catalog.setval('public.questions_answers_id_seq', 28, true);
 
 
 --
 -- Name: reviews_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.reviews_id_seq', 105, true);
+SELECT pg_catalog.setval('public.reviews_id_seq', 149, true);
 
 
 --
@@ -774,5 +799,5 @@ ALTER TABLE ONLY public.specifications
 -- PostgreSQL database dump complete
 --
 
-\unrestrict Ha57yTEqbL1zDTSkq9PUT5xiuBcJzQtnur26mncY71y8Pg2XAtvOckzZlnc9XKE
+\unrestrict Jt7KDDBldpjcl7MexDpX94dJQuCQyedjewrikVGywwNWdUWMwiAgMDVcb20M1QD
 
