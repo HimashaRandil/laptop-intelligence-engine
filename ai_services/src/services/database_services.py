@@ -1,6 +1,6 @@
-# backend/src/app/services/database_service.py
+# ai_services/src/services/database_services.py
 from sqlalchemy.orm import Session
-from sqlalchemy import and_, or_, text
+from sqlalchemy import and_, or_, text, String
 from typing import List, Dict, Any, Optional, Tuple
 from backend.src.utils.logger.logging import logger as logging
 from backend.src.app.models.laptop import Laptop
@@ -19,6 +19,10 @@ class DatabaseService:
     ) -> List[Laptop]:
         """Get laptops within budget range"""
         try:
+            # Convert to float to ensure proper comparison
+            min_price = float(min_price)
+            max_price = float(max_price)
+
             # Get latest prices for each laptop
             latest_prices = db.execute(
                 text(
@@ -36,7 +40,7 @@ class DatabaseService:
             valid_laptop_ids = [
                 row.laptop_id
                 for row in latest_prices
-                if min_price <= row.price <= max_price
+                if min_price <= float(row.price) <= max_price
             ]
 
             return db.query(Laptop).filter(Laptop.id.in_(valid_laptop_ids)).all()
@@ -60,7 +64,8 @@ class DatabaseService:
                             Specification.category.ilike(f"%{category}%"),
                             or_(
                                 Specification.specification_value.ilike(f"%{value}%"),
-                                Specification.structured_value.astext.ilike(
+                                # Fixed: Use cast to String instead of .astext
+                                Specification.structured_value.cast(String).ilike(
                                     f"%{value}%"
                                 ),
                             ),
@@ -86,6 +91,9 @@ class DatabaseService:
     def get_laptop_summary(db: Session, laptop_id: int) -> Dict[str, Any]:
         """Get comprehensive laptop summary"""
         try:
+            # Ensure laptop_id is an integer
+            laptop_id = int(laptop_id)
+
             laptop = db.query(Laptop).filter(Laptop.id == laptop_id).first()
             if not laptop:
                 return {}

@@ -2,7 +2,7 @@
 import sys
 from pathlib import Path
 
-from backend.src.app.services.vector_service import vector_service
+from ai_services.src.services.vector_service import vector_service
 
 
 def test_searches():

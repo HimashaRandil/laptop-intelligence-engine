@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 from backend.src.app.core.db import SessionLocal
-from backend.src.app.services.vector_service import vector_service
+from ai_services.src.services.vector_service import vector_service
 from backend.src.utils.logger.logging import logger as logging
 
 
