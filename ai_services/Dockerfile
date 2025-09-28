@@ -27,9 +27,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip cache purge
 
 # Copy application code (separate layer for faster rebuilds)
-COPY ai_services/src/ ./src/
-COPY backend/src/app/models/ ./src/models/
-COPY backend/src/utils/ ./src/utils/
+COPY ai_services/ ./ai_services/
+COPY backend/ ./backend/
 
 # Create logs directory
 RUN mkdir -p /app/logs
@@ -42,4 +41,4 @@ EXPOSE 8001
 #     CMD curl -f http://localhost:8001/ai/health || exit 1
 
 # Run the application
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["uvicorn", "ai_services.src.main:app", "--host", "0.0.0.0", "--port", "8001"]
