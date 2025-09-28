@@ -2,6 +2,9 @@
 
 A comprehensive laptop comparison and recommendation system built with AI-powered insights, specification analysis, and intelligent recommendations based on user reviews and technical specifications.
 
+
+Demo Screen Recording: [Click Here](https://www.loom.com/share/c281780d942e46e8a9b038200082fa27?sid=430b20d1-368d-4a46-bf05-019c5198dd3d) 
+
 ## 🏗️ Architecture Overview
 
 - **Frontend**: Next.js React application with TypeScript
