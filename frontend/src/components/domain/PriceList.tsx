@@ -1,6 +1,5 @@
 import { PriceSnapshot } from "@/lib/types";
 import { Card } from "../ui/Card";
-import { Tag } from 'lucide-react';
 
 interface PriceListProps {
     prices: PriceSnapshot[];

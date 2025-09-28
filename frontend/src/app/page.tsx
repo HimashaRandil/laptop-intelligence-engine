@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Search, Filter, ChevronDown, Star, X } from 'lucide-react';
 import { ProductCard } from "@/components/domain/ProductCard";
+import ChatWidget from "@/components/ui/ChatWidget"; // Add this import
 import { getAllLaptops } from '@/lib/api';
 import { LaptopSimple } from '@/lib/types';
 
@@ -27,8 +28,8 @@ export default function HomePage() {
         const data = await getAllLaptops();
         setLaptops(data);
         setFilteredLaptops(data);
-      } catch (err) {
-        setError('Failed to load laptops. Please ensure the API server is running.');
+      } catch (_err) {
+        setError(`Failed to load laptops. Please ensure the API server is running: ${_err}`);
       } finally {
         setIsLoading(false);
       }
@@ -298,7 +299,7 @@ export default function HomePage() {
                     imageUrl={laptop.image_url || '/placeholder-laptop.jpg'}
                     price={laptop.latest_price || 0}
                     average_rating={laptop.average_rating || 0}
-                    reviewCount={laptop.review_count || 0}
+                    review_count={laptop.review_count || 0}
                   />
                 ))}
               </div>
@@ -316,6 +317,9 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Chat Widget */}
+      <ChatWidget />
     </div>
   );
 }

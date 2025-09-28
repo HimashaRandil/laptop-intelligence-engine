@@ -39,7 +39,7 @@ export function ProductCard(props: ProductCardProps) {
                         <div className="flex items-center gap-1 text-sm text-gray-600">
                             <Star size={16} className="text-yellow-500" />
                             <span>
-                                {props.average_rating ? props.average_rating.toFixed(1) : 'New'} ({props.reviewCount || 0})
+                                {props.average_rating ? props.average_rating.toFixed(1) : 'New'} ({props.review_count || 0})
                             </span>
                         </div>
                     </div>

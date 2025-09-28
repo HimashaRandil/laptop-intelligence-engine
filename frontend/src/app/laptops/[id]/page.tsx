@@ -36,8 +36,8 @@ export default function LaptopDetailPage() {
                     const qaData = await qaResponse.json();
                     setQuestionsAnswers(qaData);
                 }
-            } catch (err) {
-                setError('Failed to load laptop details.');
+            } catch (_err) {
+                setError(`Failed to load laptop details: ${_err}`);
             } finally {
                 setIsLoading(false);
             }
