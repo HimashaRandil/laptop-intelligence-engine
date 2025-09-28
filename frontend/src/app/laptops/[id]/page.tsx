@@ -31,7 +31,7 @@ export default function LaptopDetailPage() {
                 setLaptop(data);
 
                 // Fetch Q&A data
-                const qaResponse = await fetch(`http://localhost:8000/laptops/${laptopId}/questions`);
+                const qaResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/laptops/${laptopId}/questions`);
                 if (qaResponse.ok) {
                     const qaData = await qaResponse.json();
                     setQuestionsAnswers(qaData);
