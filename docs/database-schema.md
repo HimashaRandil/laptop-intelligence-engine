@@ -4,7 +4,7 @@ The Laptop Intelligence Engine uses a PostgreSQL database designed to handle lap
 
 ## Schema Overview
 
-![Database Schema](docs\Diagram.png)
+![Database Schema](https://github.com/HimashaRandil/laptop-intelligence-engine/blob/main/docs/Diagram.png?raw=true)
 
 The database consists of 5 core tables with carefully designed relationships to support the application's features:
 
