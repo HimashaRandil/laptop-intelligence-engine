@@ -4,8 +4,14 @@ A comprehensive laptop comparison and recommendation system built with AI-powere
 
 
 Demo Screen Recording: [Click Here](https://www.loom.com/share/ad51e74cd6f747cc96a2669d28a891e9?sid=2e98dce2-ba7c-4904-91eb-4a61301cbb57)
+
+
 Database Schema Documentation: [Click Here](https://github.com/HimashaRandil/laptop-intelligence-engine/blob/6736245952eb0279b0de2f8d31c39bfc99ff4791/docs/database-schema.md)
-API Documentation: Click Here
+
+
+API Documentation: [Click Here](https://github.com/HimashaRandil/laptop-intelligence-engine/blob/956d1216558bcdcc96fabf45ed1f79b8825c8e71/docs/api.md)
+
+
 
 ## 🏗️ Architecture Overview
 
