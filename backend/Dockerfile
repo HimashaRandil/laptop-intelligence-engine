@@ -26,9 +26,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -e . && \
     pip cache purge
 
-# Copy backend application code
-COPY backend/src/ ./src/
-COPY backend/data/ ./data/
+# Copy backend application code WITH the backend directory structure
+COPY backend/ ./backend/
 
 # Create necessary directories
 RUN mkdir -p /app/logs
@@ -40,5 +39,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
-# Run the backend API
-CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the backend API with correct path
+CMD ["uvicorn", "backend.src.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
